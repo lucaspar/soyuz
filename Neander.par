@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Jarvis::  Thu Oct 26 01:38:14 2017
+Jarvis::  Thu Oct 26 02:15:58 2017
 
 par -w -intstyle ise -ol high -t 1 Neander_map.ncd Neander.ncd Neander.pcf 
 
@@ -71,20 +71,20 @@ Phase 3.31  Local Placement Optimization (Checksum:4a5dbad6) REAL time: 1 secs
 
 Phase 4.2  Initial Clock and IO Placement
 ...........
-Phase 4.2  Initial Clock and IO Placement (Checksum:54872556) REAL time: 2 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:54872556) REAL time: 1 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:54872556) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:54872556) REAL time: 1 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:54872556) REAL time: 2 secs 
+Phase 6.36  Local Placement Optimization (Checksum:54872556) REAL time: 1 secs 
 
 Phase 7.3  Local Placement Optimization
 ...........
-Phase 7.3  Local Placement Optimization (Checksum:6c20fc96) REAL time: 2 secs 
+Phase 7.3  Local Placement Optimization (Checksum:6c20fc96) REAL time: 1 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:6c20fc96) REAL time: 2 secs 
+Phase 8.5  Local Placement Optimization (Checksum:6c20fc96) REAL time: 1 secs 
 
 Phase 9.8  Global Placement
 ....
@@ -206,7 +206,7 @@ WARNING:Par:283 - There are 1 loadless signals in this design. This design will 
 Total REAL time to PAR completion: 7 secs 
 Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  565 MB
+Peak Memory Usage:  572 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
