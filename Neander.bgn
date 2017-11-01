@@ -2,10 +2,10 @@ Release 14.7 - Bitgen P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Loading device for application Rf_Device from file '3s500e.nph' in environment
 /media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/.
-   "Neander" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+   "Neander" is an NCD, version 3.2, device xc3s500e, package fg320, speed -5
 Opened constraints file Neander.pcf.
 
-Thu Oct 26 02:16:29 2017
+Wed Nov  1 09:57:54 2017
 
 /media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No Neander.ncd 
 

@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: Neander.prj
@@ -45,7 +45,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "Neander"
 Output Format                      : NGC
-Target Device                      : xc3s500e-4-fg320
+Target Device                      : xc3s500e-5-fg320
 
 ---- Source Options
 Top Module Name                    : Neander
@@ -110,8 +110,7 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/ClockDivisor.vhd" in Library work.
 Architecture behavioral of Entity clockdivisor is up to date.
 Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/Neander.vhd" in Library work.
-Entity <neander> compiled.
-Entity <neander> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity neander is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -258,7 +257,7 @@ Cell Usage :
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s500efg320-4 
+Selected Device : 3s500efg320-5 
 
  Number of Slices:                       46  out of   4656     0%  
  Number of Slice Flip Flops:             27  out of   9312     0%  
@@ -303,11 +302,11 @@ reset                              | IBUF                   | 25    |
 
 Timing Summary:
 ---------------
-Speed Grade: -4
+Speed Grade: -5
 
-   Minimum period: 9.664ns (Maximum Frequency: 103.473MHz)
-   Minimum input arrival time before clock: 4.332ns
-   Maximum output required time after clock: 4.310ns
+   Minimum period: 8.359ns (Maximum Frequency: 119.628MHz)
+   Minimum input arrival time before clock: 3.781ns
+   Maximum output required time after clock: 4.063ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -316,10 +315,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 9.664ns (frequency: 103.473MHz)
+  Clock period: 8.359ns (frequency: 119.628MHz)
   Total number of paths / destination ports: 8776 / 27
 -------------------------------------------------------------------------
-Delay:               9.664ns (Levels of Logic = 28)
+Delay:               8.359ns (Levels of Logic = 28)
   Source:            divisor/counter_50M_1 (FF)
   Destination:       divisor/clk_1Hz_aux (FF)
   Source Clock:      clk rising
@@ -329,46 +328,46 @@ Delay:               9.664ns (Levels of Logic = 28)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.591   0.622  divisor/counter_50M_1 (divisor/counter_50M_1)
-     LUT1:I0->O            1   0.704   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<1>_rt (divisor/Madd_clk_1Hz_aux_add0000_cy<1>_rt)
-     MUXCY:S->O            1   0.464   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<1> (divisor/Madd_clk_1Hz_aux_add0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<2> (divisor/Madd_clk_1Hz_aux_add0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<3> (divisor/Madd_clk_1Hz_aux_add0000_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<4> (divisor/Madd_clk_1Hz_aux_add0000_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<5> (divisor/Madd_clk_1Hz_aux_add0000_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<6> (divisor/Madd_clk_1Hz_aux_add0000_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<7> (divisor/Madd_clk_1Hz_aux_add0000_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<8> (divisor/Madd_clk_1Hz_aux_add0000_cy<8>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<9> (divisor/Madd_clk_1Hz_aux_add0000_cy<9>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<10> (divisor/Madd_clk_1Hz_aux_add0000_cy<10>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<11> (divisor/Madd_clk_1Hz_aux_add0000_cy<11>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<12> (divisor/Madd_clk_1Hz_aux_add0000_cy<12>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<13> (divisor/Madd_clk_1Hz_aux_add0000_cy<13>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<14> (divisor/Madd_clk_1Hz_aux_add0000_cy<14>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<15> (divisor/Madd_clk_1Hz_aux_add0000_cy<15>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<16> (divisor/Madd_clk_1Hz_aux_add0000_cy<16>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<17> (divisor/Madd_clk_1Hz_aux_add0000_cy<17>)
-     XORCY:CI->O           1   0.804   0.595  divisor/Madd_clk_1Hz_aux_add0000_xor<18> (divisor/clk_1Hz_aux_add0000<18>)
-     LUT1:I0->O            1   0.704   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<0>_rt (divisor/counter_50M_cmp_eq0000_wg_cy<0>_rt)
-     MUXCY:S->O            1   0.464   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<0> (divisor/counter_50M_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<1> (divisor/counter_50M_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<2> (divisor/counter_50M_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<3> (divisor/counter_50M_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<4> (divisor/counter_50M_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<5> (divisor/counter_50M_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O          26   0.459   1.339  divisor/counter_50M_cmp_eq0000_wg_cy<6> (divisor/counter_50M_cmp_eq0000)
-     LUT2:I1->O            1   0.704   0.420  divisor/clk_1Hz_aux_and00001 (divisor/clk_1Hz_aux_and0000)
-     FDE:CE                    0.555          divisor/clk_1Hz_aux
+     FDC:C->Q              2   0.514   0.532  divisor/counter_50M_1 (divisor/counter_50M_1)
+     LUT1:I0->O            1   0.612   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<1>_rt (divisor/Madd_clk_1Hz_aux_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<1> (divisor/Madd_clk_1Hz_aux_add0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<2> (divisor/Madd_clk_1Hz_aux_add0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<3> (divisor/Madd_clk_1Hz_aux_add0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<4> (divisor/Madd_clk_1Hz_aux_add0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<5> (divisor/Madd_clk_1Hz_aux_add0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<6> (divisor/Madd_clk_1Hz_aux_add0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<7> (divisor/Madd_clk_1Hz_aux_add0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<8> (divisor/Madd_clk_1Hz_aux_add0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<9> (divisor/Madd_clk_1Hz_aux_add0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<10> (divisor/Madd_clk_1Hz_aux_add0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<11> (divisor/Madd_clk_1Hz_aux_add0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<12> (divisor/Madd_clk_1Hz_aux_add0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<13> (divisor/Madd_clk_1Hz_aux_add0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<14> (divisor/Madd_clk_1Hz_aux_add0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<15> (divisor/Madd_clk_1Hz_aux_add0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<16> (divisor/Madd_clk_1Hz_aux_add0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<17> (divisor/Madd_clk_1Hz_aux_add0000_cy<17>)
+     XORCY:CI->O           1   0.699   0.509  divisor/Madd_clk_1Hz_aux_add0000_xor<18> (divisor/clk_1Hz_aux_add0000<18>)
+     LUT1:I0->O            1   0.612   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<0>_rt (divisor/counter_50M_cmp_eq0000_wg_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<0> (divisor/counter_50M_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<1> (divisor/counter_50M_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<2> (divisor/counter_50M_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<3> (divisor/counter_50M_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<4> (divisor/counter_50M_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<5> (divisor/counter_50M_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O          26   0.399   1.140  divisor/counter_50M_cmp_eq0000_wg_cy<6> (divisor/counter_50M_cmp_eq0000)
+     LUT2:I1->O            1   0.612   0.357  divisor/clk_1Hz_aux_and00001 (divisor/clk_1Hz_aux_and0000)
+     FDE:CE                    0.483          divisor/clk_1Hz_aux
     ----------------------------------------
-    Total                      9.664ns (6.688ns logic, 2.976ns route)
-                                       (69.2% logic, 30.8% route)
+    Total                      8.359ns (5.821ns logic, 2.538ns route)
+                                       (69.6% logic, 30.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'divisor/clk_1Hz_aux'
-  Clock period: 1.949ns (frequency: 513.084MHz)
+  Clock period: 1.689ns (frequency: 592.084MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               1.949ns (Levels of Logic = 0)
+Delay:               1.689ns (Levels of Logic = 0)
   Source:            pulse_aux (FF)
   Destination:       pulse_aux (FF)
   Source Clock:      divisor/clk_1Hz_aux rising
@@ -378,17 +377,17 @@ Delay:               1.949ns (Levels of Logic = 0)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.447  pulse_aux (pulse_aux)
-     FDR:R                     0.911          pulse_aux
+     FDR:C->Q              2   0.514   0.380  pulse_aux (pulse_aux)
+     FDR:R                     0.795          pulse_aux
     ----------------------------------------
-    Total                      1.949ns (1.502ns logic, 0.447ns route)
-                                       (77.1% logic, 22.9% route)
+    Total                      1.689ns (1.309ns logic, 0.380ns route)
+                                       (77.5% logic, 22.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.332ns (Levels of Logic = 2)
+Offset:              3.781ns (Levels of Logic = 2)
   Source:            reset (PAD)
   Destination:       divisor/clk_1Hz_aux (FF)
   Destination Clock: clk rising
@@ -397,18 +396,18 @@ Offset:              4.332ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            26   1.218   1.435  reset_IBUF (reset_IBUF)
-     LUT2:I0->O            1   0.704   0.420  divisor/clk_1Hz_aux_and00001 (divisor/clk_1Hz_aux_and0000)
-     FDE:CE                    0.555          divisor/clk_1Hz_aux
+     IBUF:I->O            26   1.106   1.223  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            1   0.612   0.357  divisor/clk_1Hz_aux_and00001 (divisor/clk_1Hz_aux_and0000)
+     FDE:CE                    0.483          divisor/clk_1Hz_aux
     ----------------------------------------
-    Total                      4.332ns (2.477ns logic, 1.855ns route)
-                                       (57.2% logic, 42.8% route)
+    Total                      3.781ns (2.201ns logic, 1.580ns route)
+                                       (58.2% logic, 41.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'divisor/clk_1Hz_aux'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.310ns (Levels of Logic = 1)
+Offset:              4.063ns (Levels of Logic = 1)
   Source:            pulse_aux (FF)
   Destination:       pulsing (PAD)
   Source Clock:      divisor/clk_1Hz_aux rising
@@ -417,17 +416,17 @@ Offset:              4.310ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.447  pulse_aux (pulse_aux)
-     OBUF:I->O                 3.272          pulsing_OBUF (pulsing)
+     FDR:C->Q              2   0.514   0.380  pulse_aux (pulse_aux)
+     OBUF:I->O                 3.169          pulsing_OBUF (pulsing)
     ----------------------------------------
-    Total                      4.310ns (3.863ns logic, 0.447ns route)
-                                       (89.6% logic, 10.4% route)
+    Total                      4.063ns (3.683ns logic, 0.380ns route)
+                                       (90.6% logic, 9.4% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.95 secs
+Total CPU time to Xst completion: 4.13 secs
  
 --> 
 

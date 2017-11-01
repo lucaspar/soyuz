@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Jarvis::  Thu Oct 26 02:15:58 2017
+Jarvis::  Wed Nov 01 09:57:37 2017
 
 par -w -intstyle ise -ol high -t 1 Neander_map.ncd Neander.ncd Neander.pcf 
 
@@ -9,7 +9,7 @@ par -w -intstyle ise -ol high -t 1 Neander_map.ncd Neander.ncd Neander.pcf
 Constraints file: Neander.pcf.
 Loading device for application Rf_Device from file '3s500e.nph' in environment
 /media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/.
-   "Neander" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+   "Neander" is an NCD, version 3.2, device xc3s500e, package fg320, speed -5
 
 Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
@@ -71,37 +71,34 @@ Phase 3.31  Local Placement Optimization (Checksum:4a5dbad6) REAL time: 1 secs
 
 Phase 4.2  Initial Clock and IO Placement
 ...........
-Phase 4.2  Initial Clock and IO Placement (Checksum:54872556) REAL time: 1 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:54872556) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:54872556) REAL time: 1 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:54872556) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:54872556) REAL time: 1 secs 
+Phase 6.36  Local Placement Optimization (Checksum:54872556) REAL time: 2 secs 
 
 Phase 7.3  Local Placement Optimization
 ...........
-Phase 7.3  Local Placement Optimization (Checksum:6c20fc96) REAL time: 1 secs 
+Phase 7.3  Local Placement Optimization (Checksum:6c20fc96) REAL time: 2 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:6c20fc96) REAL time: 1 secs 
+Phase 8.5  Local Placement Optimization (Checksum:6c20fc96) REAL time: 2 secs 
 
 Phase 9.8  Global Placement
 ....
 ..
-..
-..
-..
-Phase 9.8  Global Placement (Checksum:be41f8b) REAL time: 3 secs 
+Phase 9.8  Global Placement (Checksum:d49d87be) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:be41f8b) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:d49d87be) REAL time: 3 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:de003768) REAL time: 3 secs 
+Phase 11.18  Placement Optimization (Checksum:e25b0db8) REAL time: 3 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:de003768) REAL time: 3 secs 
+Phase 12.5  Local Placement Optimization (Checksum:e25b0db8) REAL time: 3 secs 
 
 Total REAL time to Placer completion: 3 secs 
 Total CPU  time to Placer completion: 3 secs 
@@ -116,9 +113,9 @@ Phase  1  : 192 unrouted;      REAL time: 6 secs
 
 Phase  2  : 177 unrouted;      REAL time: 6 secs 
 
-Phase  3  : 10 unrouted;      REAL time: 6 secs 
+Phase  3  : 14 unrouted;      REAL time: 6 secs 
 
-Phase  4  : 15 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  4  : 17 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
@@ -141,7 +138,7 @@ WARNING:Route:455 - CLK Net:divisor/clk_1Hz_aux may have excessive skew because
       1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 
 Total REAL time to Router completion: 7 secs 
-Total CPU time to Router completion: 7 secs 
+Total CPU time to Router completion: 6 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -159,9 +156,9 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y11| No   |   14 |  0.019     |  0.160      |
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |   14 |  0.015     |  0.142      |
 +---------------------+--------------+------+------+------------+-------------+
-| divisor/clk_1Hz_aux |         Local|      |    2 |  0.000     |  0.956      |
+| divisor/clk_1Hz_aux |         Local|      |    2 |  0.000     |  1.146      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -181,11 +178,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     8.944ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     1.094ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.510ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.952ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net div | SETUP       |         N/A|     2.210ns|     N/A|           0
-  isor/clk_1Hz_aux                          | HOLD        |     1.531ns|            |       0|           0
+  Autotimespec constraint for clock net div | SETUP       |         N/A|     1.927ns|     N/A|           0
+  isor/clk_1Hz_aux                          | HOLD        |     1.398ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -206,7 +203,7 @@ WARNING:Par:283 - There are 1 loadless signals in this design. This design will 
 Total REAL time to PAR completion: 7 secs 
 Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  572 MB
+Peak Memory Usage:  566 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

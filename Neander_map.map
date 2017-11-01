@@ -3,13 +3,13 @@ Xilinx Map Application Log File for Design 'Neander'
 
 Design Information
 ------------------
-Command Line   : map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off
+Command Line   : map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off
 -c 100 -o Neander_map.ncd Neander.ngd Neander.pcf 
 Target Device  : xc3s500e
 Target Package : fg320
-Target Speed   : -4
+Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Oct 26 02:15:52 2017
+Mapped Date    : Wed Nov  1 09:57:32 2017
 
 Mapping design into LUTs...
 Running directed packing...

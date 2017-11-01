@@ -3,12 +3,12 @@ Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 /media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce
--intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Neander.twx Neander.ncd -o
+-intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Neander.twx Neander.ncd -o
 Neander.twr Neander.pcf -ucf constraints.ucf
 
 Design file:              Neander.ncd
 Physical constraint file: Neander.pcf
-Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -45,7 +45,7 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-reset       |    1.244(R)|    0.440(R)|clk_BUFGP         |   0.000|
+reset       |    2.399(R)|   -0.613(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -53,11 +53,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.944|         |         |         |
+clk            |    7.510|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Oct 26 02:16:09 2017 
+Analysis completed Wed Nov  1 09:57:49 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
