@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Nov  1 09:57:45 2017
+Sun Nov 12 22:03:36 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -33,7 +33,7 @@ Pinout by Pin Number:
 |A11       |           |IOB      |IO                       |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A12       |           |         |NC                       |         |           |              |          |         |           |         |         |          |           |                |
 |A13       |           |DIFFM    |IO_L05P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|A14       |pulsing    |IOB      |IO_L04N_0                |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|A14       |           |DIFFS    |IO_L04N_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A15       |           |DIFFSI   |IP_L02N_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A16       |           |DIFFS    |IO_L01N_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A17       |           |         |TCK                      |         |           |              |          |         |           |         |         |          |           |                |
@@ -91,7 +91,7 @@ Pinout by Pin Number:
 |D15       |           |         |TMS                      |         |           |              |          |         |           |         |         |          |           |                |
 |D16       |           |DIFFS    |IO_L23N_1/LDC0           |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |D17       |           |DIFFM    |IO_L23P_1/HDC            |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|D18       |troca      |IBUF     |IP/VREF_1                |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|D18       |           |IBUF     |IP/VREF_1                |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |E1        |           |DIFFS    |IO_L03N_3                |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |E2        |           |DIFFM    |IO_L03P_3                |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |E3        |           |         |NC                       |         |           |              |          |         |           |         |         |          |           |                |
@@ -104,7 +104,7 @@ Pinout by Pin Number:
 |E10       |           |DIFFS    |IO_L11N_0/GCLK5          |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |E11       |           |DIFFM    |IO_L08P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |E12       |           |DIFFS    |IO_L06N_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|E13       |           |IOB      |IO                       |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
+|E13       |pulsing    |IOB      |IO                       |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
 |E14       |           |         |VCCINT                   |         |           |              |          |         |           |         |1.2      |          |           |                |
 |E15       |           |         |NC                       |         |           |              |          |         |           |         |         |          |           |                |
 |E16       |           |         |NC                       |         |           |              |          |         |           |         |         |          |           |                |

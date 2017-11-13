@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Wed Nov  1 09:56:39 2017">
+  <application stringID="Xst" timeStamp="Sun Nov 12 22:03:06 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -24,7 +24,7 @@
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE//bin/lin64:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/bin/lin64:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/sysgen/util:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/sysgen/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/../../../DocNav:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/PlanAhead/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/bin/lin64:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/common/bin/lin64:/home/lucas/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/microchip/xc16/v1.31/bin:/opt/microchip/xc8/v1.42/bin:/home/lucas/.config/composer/vendor/bin/:/home/lucas/installed/guetzli/bin/Release/guetzli:/home/lucas/installed/guetzli/bin/Release/"/>
+          <item stringID="value" value="/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE//bin/lin64:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/bin/lin64:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/sysgen/util:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/sysgen/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/ISE/../../../DocNav:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/PlanAhead/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/bin/lin64:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/media/lucas/Data/installed/ise/xilinx/14.7/ISE_DS/common/bin/lin64:/home/lucas/.linuxbrew/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/microchip/xc16/v1.31/bin:/opt/microchip/xc8/v1.42/bin:/home/lucas/.config/composer/vendor/bin/:/home/lucas/installed/guetzli/bin/Release/guetzli:/home/lucas/installed/guetzli/bin/Release/:/home/lucas/installed/guetzli/bin/Release/"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="LMC_HOME"/>
@@ -49,7 +49,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz"/>
-          <item stringID="speed" value="2960.156 MHz"/>
+          <item stringID="speed" value="2899.968 MHz"/>
         </row>
       </table>
     </section>
@@ -110,6 +110,7 @@
       <item DEFAULT="0%" label="-slice_utilization_ratio_maxmargin" stringID="XST_SLICEUTILIZATIONRATIOMAXMARGIN" value="5"/>
     </section>
     <section stringID="XST_HDL_SYNTHESIS_REPORT">
+      <item dataType="int" stringID="XST_ROMS" value="1"></item>
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="1"></item>
       <item dataType="int" stringID="XST_COUNTERS" value="1"></item>
       <item dataType="int" stringID="XST_REGISTERS" value="2">
@@ -117,6 +118,7 @@
       </item>
     </section>
     <section stringID="XST_ADVANCED_HDL_SYNTHESIS_REPORT">
+      <item dataType="int" stringID="XST_ROMS" value="1"></item>
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="1"></item>
       <item dataType="int" stringID="XST_COUNTERS" value="1"></item>
       <item dataType="int" stringID="XST_REGISTERS" value="2">
@@ -142,7 +144,7 @@
         <item stringID="XST_KEEP_HIERARCHY" value="No"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="4"/>
+        <item stringID="XST_IOS" value="3"/>
       </section>
       <section stringID="XST_CELL_USAGE">
         <item dataType="int" stringID="XST_BELS" value="191">
@@ -174,7 +176,7 @@
       <item AVAILABLE="4656" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="46"/>
       <item AVAILABLE="9312" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="27"/>
       <item AVAILABLE="9312" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="84"/>
-      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="4"/>
+      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="3"/>
       <item AVAILABLE="232" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="3"/>
       <item AVAILABLE="24" dataType="int" label="Number of GCLKs" stringID="XST_NUMBER_OF_GCLKS" value="1"/>
     </section>
@@ -183,7 +185,7 @@
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="1"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="14"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="1"/>
     </section>
   </application>

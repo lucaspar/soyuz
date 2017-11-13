@@ -1,2 +1,3 @@
+vhdl work "instruction_decoder.vhd"
 vhdl work "ClockDivisor.vhd"
 vhdl work "Neander.vhd"

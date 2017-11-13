@@ -9,7 +9,6 @@ NET "clk" 		LOC = "B8";
 
 # buttons
 NET "reset" 		LOC = "B18"; 
-NET "troca"       LOC = "D18";
 
 # leds
 #NET "leds<0>" 	LOC = "J14"; 
