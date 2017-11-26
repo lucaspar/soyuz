@@ -1,0 +1,6 @@
+V3 3
+FL C:/Users/Jorge/Downloads/Compressed/soyuz-master/PC.vhd 2017/11/26.18:33:30 P.20131013
+EN work/PC 1511728440 FL C:/Users/Jorge/Downloads/Compressed/soyuz-master/PC.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/PC/Behavioral 1511728441 \
+      FL C:/Users/Jorge/Downloads/Compressed/soyuz-master/PC.vhd EN work/PC 1511728440
