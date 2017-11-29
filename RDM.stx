@@ -1,0 +1,51 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Jorge/Downloads/Compressed/soyuz-master/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Jorge/Downloads/Compressed/soyuz-master/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" in Library work.
+ERROR:HDLParsers:3010 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 40. Entity RDM does not exist.
+ERROR:HDLParsers:3312 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 41. Undefined symbol 'STD_LOGIC_VECTOR'.
+ERROR:HDLParsers:1209 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 41. STD_LOGIC_VECTOR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 44. Undefined symbol 'clk'.
+ERROR:HDLParsers:1209 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 44. clk: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 44. Undefined symbol 'wea'.
+ERROR:HDLParsers:1209 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 44. wea: Undefined symbol (last report in this block)
+ERROR:HDLParsers:808 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 46. = can not have such operands in this context.
+ERROR:HDLParsers:3312 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 47. Undefined symbol 'aux'.
+ERROR:HDLParsers:808 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 48. = can not have such operands in this context.
+ERROR:HDLParsers:808 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 49. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 50. aux: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 50. Undefined symbol 'reg_dina'.
+ERROR:HDLParsers:1209 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 50. reg_dina: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 44. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 54. Undefined symbol 'reg_douta'.
+ERROR:HDLParsers:3312 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 54. Undefined symbol 'aux'.
+ERROR:HDLParsers:1209 - "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" Line 54. aux: Undefined symbol (last report in this block)
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+
+Total memory usage is 213340 kilobytes
+
+Number of errors   :   17 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

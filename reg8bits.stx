@@ -3,26 +3,26 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/Jorge/Downloads/Compressed/soyuz-master/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.40 secs
  
 --> Parameter xsthdpdir set to C:/Users/Jorge/Downloads/Compressed/soyuz-master/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.40 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Jorge/Downloads/Compressed/soyuz-master/PC.vhd" in Library work.
-Architecture behavioral of Entity pc is up to date.
+Compiling vhdl file "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" in Library work.
+Architecture behavioral of Entity reg8bits is up to date.
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.09 secs
  
 --> 
 

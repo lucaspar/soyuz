@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    03:56:14 11/26/2017 
+-- Create Date:    23:56:13 11/28/2017 
 -- Design Name: 
--- Module Name:    PC - Behavioral 
+-- Module Name:    reg8bits - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -19,7 +19,6 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -30,34 +29,29 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity PC is
-    Port ( clk : in  STD_LOGIC;
-			  wea : in  STD_LOGIC;
-			  cargaPC : in  STD_LOGIC;
-			  incrementa : in  STD_LOGIC;
-			  PCdina : in STD_LOGIC_VECTOR(7 downto 0);
-			  PCdouta : out  STD_LOGIC_VECTOR(7 downto 0)); 
-end PC;
+entity reg8bits is
+    Port ( wea : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           reg_dina : in  STD_LOGIC_VECTOR (7 downto 0);
+           reg_carga : in  STD_LOGIC;
+           reg_douta : out  STD_LOGIC_VECTOR (7 downto 0));
+end reg8bits;
 
-architecture Behavioral of PC is
-
-	signal data_aux: STD_LOGIC_VECTOR(7 downto 0);
-
+architecture Behavioral of reg8bits is
+	signal aux : STD_LOGIC_VECTOR (7 downto 0);
+	constant aux_delay: TIME := 2 ns; 
 begin
-	
-	process(clk, wea)
+	process (clk, wea)
 	begin
-		if (wea = '1') then
-			data_aux <= "00000000";
-		elsif (clk = '1' and clk'event) then
-			if (cargaPC	= '1') then
-				data_aux <= PCdina;
-			elsif (incrementa = '1') then
-				data_aux <= STD_LOGIC_VECTOR(unsigned(data_aux) + 1);
+		if(wea = '1') then
+			aux <= "00000000";
+		elsif (clk = '1' and clk'EVENT) then
+			if (reg_carga = '1') then
+				aux <= reg_dina;
 			end if;
-		end if;
+		end if;	
 	end process;	
-	PCdouta <= data_aux;
-	
+	reg_douta <= aux;
+
 end Behavioral;
 

@@ -22,8 +22,19 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ram_soyuz.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PC.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="PC.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="PC.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RDM.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RDM.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RDM.xst"/>
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ram_soyuz.asy" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHO" xil_pn:name="ram_soyuz.vho" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="reg8bits.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="reg8bits.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="reg8bits.xst"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
