@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    23:56:13 11/28/2017 
+-- Create Date:    09:09:59 11/29/2017 
 -- Design Name: 
 -- Module Name:    reg8bits - Behavioral 
 -- Project Name: 
@@ -30,28 +30,27 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity reg8bits is
-    Port ( wea : in  STD_LOGIC;
+    Port ( rst : in  STD_LOGIC;
            clk : in  STD_LOGIC;
-           reg_dina : in  STD_LOGIC_VECTOR (7 downto 0);
+           reg_in : in  STD_LOGIC_VECTOR (7 downto 0);
            reg_carga : in  STD_LOGIC;
-           reg_douta : out  STD_LOGIC_VECTOR (7 downto 0));
+           reg_out : out  STD_LOGIC_VECTOR (7 downto 0));
 end reg8bits;
 
 architecture Behavioral of reg8bits is
 	signal aux : STD_LOGIC_VECTOR (7 downto 0);
 	constant aux_delay: TIME := 2 ns; 
 begin
-	process (clk, wea)
+	process (clk, rst)
 	begin
-		if(wea = '1') then
+		if(rst = '1') then
 			aux <= "00000000";
 		elsif (clk = '1' and clk'EVENT) then
 			if (reg_carga = '1') then
-				aux <= reg_dina;
+				aux <= reg_in;
 			end if;
 		end if;	
 	end process;	
-	reg_douta <= aux;
+	reg_out <= aux;
 
 end Behavioral;
-

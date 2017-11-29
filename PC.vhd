@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    03:56:14 11/26/2017 
+-- Create Date:    09:08:54 11/29/2017 
 -- Design Name: 
 -- Module Name:    PC - Behavioral 
 -- Project Name: 
@@ -30,34 +30,33 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity PC is
+entity PC_reg is
     Port ( clk : in  STD_LOGIC;
-			  wea : in  STD_LOGIC;
+			  rst : in  STD_LOGIC;
 			  cargaPC : in  STD_LOGIC;
 			  incrementa : in  STD_LOGIC;
-			  PCdina : in STD_LOGIC_VECTOR(7 downto 0);
-			  PCdouta : out  STD_LOGIC_VECTOR(7 downto 0)); 
-end PC;
+			  PCin : in STD_LOGIC_VECTOR(7 downto 0);
+			  PCout : out  STD_LOGIC_VECTOR(7 downto 0)); 
+end PC_reg;
 
-architecture Behavioral of PC is
+architecture Behavioral of PC_reg is
 
 	signal data_aux: STD_LOGIC_VECTOR(7 downto 0);
 
 begin
 	
-	process(clk, wea)
+	process(clk, rst)
 	begin
-		if (wea = '1') then
+		if (rst = '1') then
 			data_aux <= "00000000";
 		elsif (clk = '1' and clk'event) then
 			if (cargaPC	= '1') then
-				data_aux <= PCdina;
+				data_aux <= PCin;
 			elsif (incrementa = '1') then
 				data_aux <= STD_LOGIC_VECTOR(unsigned(data_aux) + 1);
 			end if;
 		end if;
 	end process;	
-	PCdouta <= data_aux;
+	PCout <= data_aux;
 	
 end Behavioral;
-

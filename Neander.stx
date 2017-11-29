@@ -1,0 +1,45 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Aluno/Downloads/soyuz-master/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Aluno/Downloads/soyuz-master/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Aluno/Downloads/soyuz-master/ClockDivisor.vhd" in Library work.
+Architecture behavioral of Entity clockdivisor is up to date.
+Compiling vhdl file "C:/Users/Aluno/Downloads/soyuz-master/instruction_decoder.vhd" in Library work.
+Architecture behavioral of Entity instructiondecoder is up to date.
+Compiling vhdl file "C:/Users/Aluno/Downloads/soyuz-master/reg8bits.vhd" in Library work.
+Architecture behavioral of Entity reg8bits is up to date.
+Compiling vhdl file "C:/Users/Aluno/Downloads/soyuz-master/PC.vhd" in Library work.
+Architecture behavioral of Entity pc_reg is up to date.
+Compiling vhdl file "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" in Library work.
+Entity <neander> compiled.
+ERROR:HDLParsers:3312 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 194. Undefined symbol 'mpx_sel'.
+ERROR:HDLParsers:1209 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 194. mpx_sel: Undefined symbol (last report in this block)
+ERROR:HDLParsers:164 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 195. parse error, unexpected CLOSEPAR
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+
+Total memory usage is 263956 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

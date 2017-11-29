@@ -62,32 +62,6 @@ COMPONENT wrapped_ram_soyuz
   );
 END COMPONENT;
 
-COMPONENT PC is
-Port ( 
-				clk : in  STD_LOGIC;
-				rst : in  STD_LOGIC;
-				cargaPC : in  STD_LOGIC;
-				incrementa : in  STD_LOGIC;
-				PCdina : in STD_LOGIC_VECTOR(7 downto 0);
-				PCdouta : out  STD_LOGIC_VECTOR(7 downto 0)
-			 );
-END COMPONENT;
-
-COMPONENT reg8bits is
-Port (
-			  reg_dina : in STD_LOGIC_VECTOR (7 downto 0);;
-           clk : in  STD_LOGIC;
-           wea : in  STD_LOGIC;
-           reg_carga : in  STD_LOGIC;
-           reg_douta : out  STD_LOGIC_VECTOR (7 downto 0)
-			  );
-END COMPONENT;			  
-		
-
-	signal incPC	: STD_LOGIC;
-	signal loadPC	: STD_LOGIC; 
-	signal loadRDM	: STD_LOGIC;
-	signal loadREM : STD_LOGIC;
 
 -- Configuration specification
   FOR ALL : wrapped_ram_soyuz USE ENTITY XilinxCoreLib.blk_mem_gen_v7_3(behavioral)
@@ -166,33 +140,7 @@ U0 : wrapped_ram_soyuz
     douta => douta
   );
   
-  REM_0 : reg8bits
-  PORT MAP (
-				clk			=>clk;
-				wea			=>wea;
-				reg_carga	=>loadREM;
-				reg_dina		=>dina;
-				reg_douta	=>douta
-				); 
   
-  RDM_0 : reg8bits
-  PORT MAP (
-				clk			=>clk;
-				wea			=>wea;
-				reg_carga	=>loadRDM;
-				reg_dina		=>dina;
-				reg_douta	=>douta
-				);  
-  
-  PC_0 : PC  
-  PORT MAP ( 
-				clk			=> clk;
-				wea 			=> wea;
-				cargaPC 		=> loadPC;
-				incrementa 	=> incPC;
-				PCdina 		=> dina;
-				PCdouta 		=> douta
-			 );
 -- synthesis translate_on
 
 END ram_soyuz_a;

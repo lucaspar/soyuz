@@ -1,34 +1,37 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Users/Jorge/Downloads/Compressed/soyuz-master/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/Aluno/Downloads/soyuz-master/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.40 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.27 secs
  
---> Parameter xsthdpdir set to C:/Users/Jorge/Downloads/Compressed/soyuz-master/xst
+--> Parameter xsthdpdir set to C:/Users/Aluno/Downloads/soyuz-master/xst
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.40 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd" in Library work.
-Architecture behavioral of Entity reg8bits is up to date.
+WARNING:HDLParsers:3607 - Unit work/reg8bits is now defined in a different file.  It was defined in "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd", and is now defined in "C:/Users/Aluno/Downloads/soyuz-master/reg8bits.vhd".
+WARNING:HDLParsers:3607 - Unit work/reg8bits/Behavioral is now defined in a different file.  It was defined in "C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd", and is now defined in "C:/Users/Aluno/Downloads/soyuz-master/reg8bits.vhd".
+Compiling vhdl file "C:/Users/Aluno/Downloads/soyuz-master/reg8bits.vhd" in Library work.
+Entity <reg8bits> compiled.
+Entity <reg8bits> (Architecture <behavioral>) compiled.
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.09 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.42 secs
  
 --> 
 
-Total memory usage is 213340 kilobytes
+Total memory usage is 263356 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

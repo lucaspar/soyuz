@@ -30,6 +30,10 @@ architecture Behavioral of Neander is
 	signal runJN	   : STD_LOGIC;
 	signal runJZ 		: STD_LOGIC;
 	signal runHLT 		: STD_LOGIC;
+	
+	
+	signal loadRDM	: STD_LOGIC;
+	signal loadREM : STD_LOGIC;
 
 	component ClockDivisor is
 		Port(
@@ -65,7 +69,53 @@ architecture Behavioral of Neander is
 			sHLT		: out STD_LOGIC
 		);
 	end component;
-
+	
+	COMPONENT reg8bits is
+		Port (
+					  reg_in : in STD_LOGIC_VECTOR (7 downto 0);
+					  clk : in  STD_LOGIC;
+					  rst : in  STD_LOGIC;
+					  reg_carga : in  STD_LOGIC;
+					  reg_out : out  STD_LOGIC_VECTOR (7 downto 0)
+					  );
+	END COMPONENT; 
+	
+	COMPONENT mux is
+		Port ( regist1 : in  STD_LOGIC_VECTOR (7 downto 0);
+           regist2 : in  STD_LOGIC_VECTOR (7 downto 0);
+           selec : in  STD_LOGIC;
+           saida : out  STD_LOGIC_VECTOR (7 downto 0)
+			  );
+	END COMPONENT;
+	
+	component PC_reg is
+		Port ( 
+				clk : in  STD_LOGIC;
+				rst : in  STD_LOGIC;
+				cargaPC : in  STD_LOGIC;
+				incrementa : in  STD_LOGIC;
+				PCin : in STD_LOGIC_VECTOR(7 downto 0);
+				PCout : out  STD_LOGIC_VECTOR(7 downto 0)
+			 );
+	end component;
+	
+	signal mpx_out : STD_LOGIC_VECTOR(7 downto 0);
+	signal rem_out : STD_LOGIC_VECTOR(7 downto 0);
+	signal semrdm_out : STD_LOGIC_VECTOR(7 downto 0);
+	
+	signal rdm_out : STD_LOGIC_VECTOR(7 downto 0);
+	
+	signal ula_out : STD_LOGIC_VECTOR(7 downto 0);
+	signal loadAC  : STD_LOGIC;
+	signal ac_out  : STD_LOGIC_VECTOR(7 downto 0);
+	
+	signal loadRI  : STD_LOGIC;
+	
+	signal incPC	: STD_LOGIC;
+	signal loadPC	: STD_LOGIC; 
+	signal PC_out 	: STD_LOGIC_VECTOR (7 downto 0);
+	
+	
 begin
 	
 	divisor: ClockDivisor
@@ -90,6 +140,59 @@ begin
 		sJZ		=> runJZ,
 		sHLT		=> runHLT
 	);
+	
+	AC : reg8bits
+	PORT MAP (
+				clk			=>clk,
+				rst			=>reset,
+				reg_carga	=>loadAC,
+				reg_in		=>ula_out,
+				reg_out		=>ac_out
+				); 	
+				
+	RI : reg8bits
+	PORT MAP (
+				clk			=>clk,
+				rst			=>reset,
+				reg_carga	=>loadRI,
+				reg_in		=>rdm_out,
+				reg_out		=>RI_out
+				); 	
+	
+  R_E_M : reg8bits
+  PORT MAP (
+				clk			=>clk,
+				rst			=>reset,
+				reg_carga	=>loadREM,
+				reg_in		=>mpx_out,
+				reg_out		=>rem_out
+				); 
+  
+  R_D_M : reg8bits
+  PORT MAP (
+				clk			=>clk,
+				rst			=>reset,
+				reg_carga	=>loadRDM,
+				reg_in		=>semrdm_out,
+				reg_out  	=>rdm_out
+				);  
+  
+  PC : PC_reg
+  PORT MAP ( 
+				clk			=> clk,
+				rst 			=> reset,
+				cargaPC 		=> loadPC,
+				incrementa 	=> incPC,
+				PCin 			=> RDM_out,
+				PCout 		=> PC_out
+				);
+				
+	MPX : mux
+	PORT MAP (
+				regist1 		=>PC_out,
+				regist2		=>rdm_out,
+				selec			=>mpx_sel,	
+				);
 				
 	pulse: process(clk_1Hz)
 	variable pulse_aux : std_logic := '0';

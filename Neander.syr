@@ -1,21 +1,18 @@
-Release 14.7 - xst P.20131013 (lin64)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
---> 
-Reading design: Neander.prj
+--> Reading design: Neander.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -107,367 +104,36 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/ClockDivisor.vhd" in Library work.
+Compiling vhdl file "C:/Users/Aluno/Downloads/soyuz-master/ClockDivisor.vhd" in Library work.
 Architecture behavioral of Entity clockdivisor is up to date.
-Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/instruction_decoder.vhd" in Library work.
+Compiling vhdl file "C:/Users/Aluno/Downloads/soyuz-master/instruction_decoder.vhd" in Library work.
 Architecture behavioral of Entity instructiondecoder is up to date.
-Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/Neander.vhd" in Library work.
+Compiling vhdl file "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" in Library work.
 Entity <neander> compiled.
-Entity <neander> (Architecture <behavioral>) compiled.
-
-=========================================================================
-*                     Design Hierarchy Analysis                         *
-=========================================================================
-Analyzing hierarchy for entity <Neander> in library <work> (architecture <behavioral>).
-
-Analyzing hierarchy for entity <ClockDivisor> in library <work> (architecture <behavioral>).
-
-Analyzing hierarchy for entity <InstructionDecoder> in library <work> (architecture <behavioral>).
-
-
-=========================================================================
-*                            HDL Analysis                               *
-=========================================================================
-Analyzing Entity <Neander> in library <work> (Architecture <behavioral>).
-Entity <Neander> analyzed. Unit <Neander> generated.
-
-Analyzing Entity <ClockDivisor> in library <work> (Architecture <behavioral>).
-Entity <ClockDivisor> analyzed. Unit <ClockDivisor> generated.
-
-Analyzing Entity <InstructionDecoder> in library <work> (Architecture <behavioral>).
-Entity <InstructionDecoder> analyzed. Unit <InstructionDecoder> generated.
-
-
-=========================================================================
-*                           HDL Synthesis                               *
-=========================================================================
-
-Performing bidirectional port resolution...
-
-Synthesizing Unit <ClockDivisor>.
-    Related source file is "/home/lucas/work/furg/microprocessados_sistemas/soyuz/ClockDivisor.vhd".
-    Found 1-bit register for signal <clk_1Hz_aux>.
-    Found 25-bit adder for signal <clk_1Hz_aux$add0000> created at line 32.
-    Found 25-bit up counter for signal <counter_50M>.
-    Summary:
-	inferred   1 Counter(s).
-	inferred   1 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
-Unit <ClockDivisor> synthesized.
-
-
-Synthesizing Unit <InstructionDecoder>.
-    Related source file is "/home/lucas/work/furg/microprocessados_sistemas/soyuz/instruction_decoder.vhd".
-WARNING:Xst:647 - Input <opcode<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 16x1-bit ROM for signal <sNOP>.
-    Summary:
-	inferred   1 ROM(s).
-Unit <InstructionDecoder> synthesized.
-
-
-Synthesizing Unit <Neander>.
-    Related source file is "/home/lucas/work/furg/microprocessados_sistemas/soyuz/Neander.vhd".
-WARNING:Xst:646 - Signal <runSTA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runOR> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runNOT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runNOP> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runLDA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runJZ> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runJN> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runJMP> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runHLT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runAND> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <runADD> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <RI_out> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-    Found 1-bit register for signal <pulse_aux>.
-    Summary:
-	inferred   1 D-type flip-flop(s).
-Unit <Neander> synthesized.
-
-
-=========================================================================
-HDL Synthesis Report
-
-Macro Statistics
-# ROMs                                                 : 1
- 16x1-bit ROM                                          : 1
-# Adders/Subtractors                                   : 1
- 25-bit adder                                          : 1
-# Counters                                             : 1
- 25-bit up counter                                     : 1
-# Registers                                            : 2
- 1-bit register                                        : 2
-
-=========================================================================
-
-=========================================================================
-*                       Advanced HDL Synthesis                          *
-=========================================================================
-
-WARNING:Xst:1290 - Hierarchical block <iDecoder> is unconnected in block <Neander>.
-   It will be removed from the design.
-
-=========================================================================
-Advanced HDL Synthesis Report
-
-Macro Statistics
-# ROMs                                                 : 1
- 16x1-bit ROM                                          : 1
-# Adders/Subtractors                                   : 1
- 25-bit adder                                          : 1
-# Counters                                             : 1
- 25-bit up counter                                     : 1
-# Registers                                            : 2
- Flip-Flops                                            : 2
-
-=========================================================================
-
-=========================================================================
-*                         Low Level Synthesis                           *
-=========================================================================
-
-Optimizing unit <Neander> ...
-
-Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Neander, actual ratio is 0.
-
-Final Macro Processing ...
-
-=========================================================================
-Final Register Report
-
-Macro Statistics
-# Registers                                            : 27
- Flip-Flops                                            : 27
-
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Final Report                               *
-=========================================================================
-Final Results
-RTL Top Level Output File Name     : Neander.ngr
-Top Level Output File Name         : Neander
-Output Format                      : NGC
-Optimization Goal                  : Speed
-Keep Hierarchy                     : No
-
-Design Statistics
-# IOs                              : 3
-
-Cell Usage :
-# BELS                             : 191
-#      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 49
-#      LUT2                        : 26
-#      LUT4                        : 6
-#      MUXCY                       : 55
-#      VCC                         : 1
-#      XORCY                       : 50
-# FlipFlops/Latches                : 27
-#      FDC                         : 25
-#      FDE                         : 1
-#      FDR                         : 1
-# Clock Buffers                    : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 2
-#      IBUF                        : 1
-#      OBUF                        : 1
-=========================================================================
-
-Device utilization summary:
----------------------------
-
-Selected Device : 3s500efg320-5 
-
- Number of Slices:                       46  out of   4656     0%  
- Number of Slice Flip Flops:             27  out of   9312     0%  
- Number of 4 input LUTs:                 84  out of   9312     0%  
- Number of IOs:                           3
- Number of bonded IOBs:                   3  out of    232     1%  
- Number of GCLKs:                         1  out of     24     4%  
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-TIMING REPORT
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 26    |
-divisor/clk_1Hz_aux                | NONE(pulse_aux)        | 1     |
------------------------------------+------------------------+-------+
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
-
-Asynchronous Control Signals Information:
-----------------------------------------
------------------------------------+------------------------+-------+
-Control Signal                     | Buffer(FF name)        | Load  |
------------------------------------+------------------------+-------+
-reset                              | IBUF                   | 25    |
------------------------------------+------------------------+-------+
-
-Timing Summary:
----------------
-Speed Grade: -5
-
-   Minimum period: 8.359ns (Maximum Frequency: 119.628MHz)
-   Minimum input arrival time before clock: 3.781ns
-   Maximum output required time after clock: 4.063ns
-   Maximum combinational path delay: No path found
-
-Timing Detail:
---------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 8.359ns (frequency: 119.628MHz)
-  Total number of paths / destination ports: 8776 / 27
--------------------------------------------------------------------------
-Delay:               8.359ns (Levels of Logic = 28)
-  Source:            divisor/counter_50M_1 (FF)
-  Destination:       divisor/clk_1Hz_aux (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: divisor/counter_50M_1 to divisor/clk_1Hz_aux
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              2   0.514   0.532  divisor/counter_50M_1 (divisor/counter_50M_1)
-     LUT1:I0->O            1   0.612   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<1>_rt (divisor/Madd_clk_1Hz_aux_add0000_cy<1>_rt)
-     MUXCY:S->O            1   0.404   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<1> (divisor/Madd_clk_1Hz_aux_add0000_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<2> (divisor/Madd_clk_1Hz_aux_add0000_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<3> (divisor/Madd_clk_1Hz_aux_add0000_cy<3>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<4> (divisor/Madd_clk_1Hz_aux_add0000_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<5> (divisor/Madd_clk_1Hz_aux_add0000_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<6> (divisor/Madd_clk_1Hz_aux_add0000_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<7> (divisor/Madd_clk_1Hz_aux_add0000_cy<7>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<8> (divisor/Madd_clk_1Hz_aux_add0000_cy<8>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<9> (divisor/Madd_clk_1Hz_aux_add0000_cy<9>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<10> (divisor/Madd_clk_1Hz_aux_add0000_cy<10>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<11> (divisor/Madd_clk_1Hz_aux_add0000_cy<11>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<12> (divisor/Madd_clk_1Hz_aux_add0000_cy<12>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<13> (divisor/Madd_clk_1Hz_aux_add0000_cy<13>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<14> (divisor/Madd_clk_1Hz_aux_add0000_cy<14>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<15> (divisor/Madd_clk_1Hz_aux_add0000_cy<15>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<16> (divisor/Madd_clk_1Hz_aux_add0000_cy<16>)
-     MUXCY:CI->O           1   0.051   0.000  divisor/Madd_clk_1Hz_aux_add0000_cy<17> (divisor/Madd_clk_1Hz_aux_add0000_cy<17>)
-     XORCY:CI->O           1   0.699   0.509  divisor/Madd_clk_1Hz_aux_add0000_xor<18> (divisor/clk_1Hz_aux_add0000<18>)
-     LUT1:I0->O            1   0.612   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<0>_rt (divisor/counter_50M_cmp_eq0000_wg_cy<0>_rt)
-     MUXCY:S->O            1   0.404   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<0> (divisor/counter_50M_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<1> (divisor/counter_50M_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<2> (divisor/counter_50M_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<3> (divisor/counter_50M_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<4> (divisor/counter_50M_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  divisor/counter_50M_cmp_eq0000_wg_cy<5> (divisor/counter_50M_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O          26   0.399   1.140  divisor/counter_50M_cmp_eq0000_wg_cy<6> (divisor/counter_50M_cmp_eq0000)
-     LUT2:I1->O            1   0.612   0.357  divisor/clk_1Hz_aux_and00001 (divisor/clk_1Hz_aux_and0000)
-     FDE:CE                    0.483          divisor/clk_1Hz_aux
-    ----------------------------------------
-    Total                      8.359ns (5.821ns logic, 2.538ns route)
-                                       (69.6% logic, 30.4% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'divisor/clk_1Hz_aux'
-  Clock period: 1.689ns (frequency: 592.084MHz)
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Delay:               1.689ns (Levels of Logic = 0)
-  Source:            pulse_aux (FF)
-  Destination:       pulse_aux (FF)
-  Source Clock:      divisor/clk_1Hz_aux rising
-  Destination Clock: divisor/clk_1Hz_aux rising
-
-  Data Path: pulse_aux to pulse_aux
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              2   0.514   0.380  pulse_aux (pulse_aux)
-     FDR:R                     0.795          pulse_aux
-    ----------------------------------------
-    Total                      1.689ns (1.309ns logic, 0.380ns route)
-                                       (77.5% logic, 22.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              3.781ns (Levels of Logic = 2)
-  Source:            reset (PAD)
-  Destination:       divisor/clk_1Hz_aux (FF)
-  Destination Clock: clk rising
-
-  Data Path: reset to divisor/clk_1Hz_aux
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            26   1.106   1.223  reset_IBUF (reset_IBUF)
-     LUT2:I0->O            1   0.612   0.357  divisor/clk_1Hz_aux_and00001 (divisor/clk_1Hz_aux_and0000)
-     FDE:CE                    0.483          divisor/clk_1Hz_aux
-    ----------------------------------------
-    Total                      3.781ns (2.201ns logic, 1.580ns route)
-                                       (58.2% logic, 41.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'divisor/clk_1Hz_aux'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              4.063ns (Levels of Logic = 1)
-  Source:            pulse_aux (FF)
-  Destination:       pulsing (PAD)
-  Source Clock:      divisor/clk_1Hz_aux rising
-
-  Data Path: pulse_aux to pulsing
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              2   0.514   0.380  pulse_aux (pulse_aux)
-     OBUF:I->O                 3.169          pulsing_OBUF (pulsing)
-    ----------------------------------------
-    Total                      4.063ns (3.683ns logic, 0.380ns route)
-                                       (90.6% logic, 9.4% route)
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.46 secs
- 
+ERROR:HDLParsers:164 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 119. parse error, unexpected REM
+ERROR:HDLParsers:3312 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 122. Undefined symbol 'rst'.
+ERROR:HDLParsers:1209 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 122. rst: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 123. Undefined symbol 'reg_carga'.
+ERROR:HDLParsers:1209 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 123. reg_carga: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 124. Undefined symbol 'reg_dina'.
+ERROR:HDLParsers:1209 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 124. reg_dina: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 125. Undefined symbol 'reg_douta'.
+ERROR:HDLParsers:1209 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 125. reg_douta: Undefined symbol (last report in this block)
+ERROR:HDLParsers:164 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 130. parse error, unexpected SEMICOLON, expecting COMMA or CLOSEPAR
+ERROR:HDLParsers:164 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 139. parse error, unexpected SEMICOLON, expecting COMMA or CLOSEPAR
+ERROR:HDLParsers:3312 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 141. Undefined symbol 'cargaPC'.
+ERROR:HDLParsers:1209 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 141. cargaPC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 142. Undefined symbol 'incrementa'.
+ERROR:HDLParsers:1209 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 142. incrementa: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 143. Undefined symbol 'PCdina'.
+ERROR:HDLParsers:1209 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 143. PCdina: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 144. Undefined symbol 'PCdouta'.
+ERROR:HDLParsers:1209 - "C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd" Line 144. PCdouta: Undefined symbol (last report in this block)
 --> 
 
+Total memory usage is 278388 kilobytes
 
-Total memory usage is 513388 kilobytes
-
-Number of errors   :    0 (   0 filtered)
-Number of warnings :   14 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of errors   :   19 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 
