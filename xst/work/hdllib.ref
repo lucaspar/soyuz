@@ -1,2 +1,4 @@
-EN pc NULL C:/Users/Jorge/Downloads/Compressed/soyuz-master/PC.vhd sub00/vhpl00 1511728440
-AR pc behavioral C:/Users/Jorge/Downloads/Compressed/soyuz-master/PC.vhd sub00/vhpl01 1511728441
+AR reg8bits behavioral C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd sub00/vhpl03 1511926989
+EN pc NULL C:/Users/Jorge/Downloads/Compressed/soyuz-master/PC.vhd sub00/vhpl00 1511921433
+AR pc behavioral C:/Users/Jorge/Downloads/Compressed/soyuz-master/PC.vhd sub00/vhpl01 1511921434
+EN reg8bits NULL C:/Users/Jorge/Downloads/Compressed/soyuz-master/reg8bits.vhd sub00/vhpl02 1511926988

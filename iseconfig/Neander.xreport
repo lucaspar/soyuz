@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-11-28T19:42:33</DateModified>
+  <DateModified>2017-11-28T21:41:35</DateModified>
   <ModuleName>Neander</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Jorge/Downloads/Compressed/soyuz-master/iseconfig/Neander.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Jorge/Downloads/Compressed/soyuz-master</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/Jorge/Downloads/Compressed/soyuz-master\</ImplementationReportsDirectory>
   <DateInitialized>2017-11-28T19:42:31</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
