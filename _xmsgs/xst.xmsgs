@@ -5,61 +5,383 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">119</arg>. <arg fmt="%s" index="3">parse error, unexpected REM</arg>
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">opcode&lt;3:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">122</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">rst</arg>&apos;.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">write_ram</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">122</arg>. <arg fmt="%s" index="3">rst</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_selector</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">123</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">reg_carga</arg>&apos;.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">123</arg>. <arg fmt="%s" index="3">reg_carga</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_Z</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">124</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">reg_dina</arg>&apos;.
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_N</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">124</arg>. <arg fmt="%s" index="3">reg_dina</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">semrdm_sel</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">125</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">reg_douta</arg>&apos;.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">rem_out</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">125</arg>. <arg fmt="%s" index="3">reg_douta</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">mem_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">130</arg>. <arg fmt="%s" index="3">parse error, unexpected SEMICOLON, expecting COMMA or CLOSEPAR</arg>
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mdx_sel</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">139</arg>. <arg fmt="%s" index="3">parse error, unexpected SEMICOLON, expecting COMMA or CLOSEPAR</arg>
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">loadZ</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">141</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">cargaPC</arg>&apos;.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">loadN</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">141</arg>. <arg fmt="%s" index="3">cargaPC</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">incPC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">142</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">incrementa</arg>&apos;.
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">PC_output</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">142</arg>. <arg fmt="%s" index="3">incrementa</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">PC_increment</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">143</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">PCdina</arg>&apos;.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">NZ_outputZ</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">143</arg>. <arg fmt="%s" index="3">PCdina</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">NZ_outputN</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">144</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">PCdouta</arg>&apos;.
+<msg type="warning" file="Xst" num="524" delta="new" >All outputs of the instance &lt;<arg fmt="%s" index="1">R_E_M</arg>&gt; of the block &lt;<arg fmt="%s" index="2">reg8bits</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">144</arg>. <arg fmt="%s" index="3">PCdouta</arg>: Undefined symbol (last report in this block)
+<msg type="warning" file="Xst" num="524" delta="new" >All outputs of the instance &lt;<arg fmt="%s" index="1">PC</arg>&gt; of the block &lt;<arg fmt="%s" index="2">PC_reg</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
+</msg>
+
+<msg type="warning" file="Xst" num="524" delta="new" >All outputs of the instance &lt;<arg fmt="%s" index="1">MPX</arg>&gt; of the block &lt;<arg fmt="%s" index="2">mux</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">AC</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">aux_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RI</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">aux_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RI</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">aux_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RI</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">aux_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">RI</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">aux_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">R_D_M</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">aux_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">R_D_M</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">aux_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">R_D_M</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">aux_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">R_D_M</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">aux_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">RI</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">aux_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">RI</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">aux_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">RI</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">aux_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">RI</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">aux_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">R_D_M</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">aux_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">R_D_M</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">aux_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">R_D_M</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">aux_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">R_D_M</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">R_D_M</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">SEMRDM</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">loadRDM</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">loadRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">current_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1899" delta="new" >Due to constant pushing, all outputs of the instance &lt;<arg fmt="%s" index="1">AC</arg>&gt; of the block &lt;<arg fmt="%s" index="2">reg8bits</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">R_D_M/aux_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">R_D_M/aux_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">R_D_M/aux_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">R_D_M/aux_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">CU/next_state_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">CU/next_state_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">CU/next_state_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RI/aux_7</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RI/aux_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RI/aux_5</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">RI/aux_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">CU/current_state_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">CU/current_state_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">CU/current_state_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">CU/stop_s</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_D_M/aux_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_D_M/aux_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_D_M/aux_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">R_D_M/aux_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">RI/aux_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">RI/aux_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">RI/aux_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">RI/aux_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/mdx_sel</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/PC_inc</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/loadAC</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/loadREM</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/write_ram</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/loadPC</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/sel_ula_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/sel_ula_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/sel_ula_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/mpx_sel</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/current_state_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/next_state_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/loadRDM</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">CU/loadRI</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>
