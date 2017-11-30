@@ -13,12 +13,13 @@ end Neander;
 
 architecture Behavioral of Neander is
 
+	-----------------------------------
+	-- 				SINAIS
+	-----------------------------------
+	-- clock
 	signal clk_1Hz 		: std_logic := '0';
 	
-	-- registradores
-	signal RI_out			: STD_LOGIC_VECTOR (7 downto 0);
-	
-	-- operacoes
+	-- sinais de operacoes
 	signal runNOP 		: STD_LOGIC;
 	signal runSTA 		: STD_LOGIC;
 	signal runLDA		: STD_LOGIC;
@@ -31,9 +32,34 @@ architecture Behavioral of Neander is
 	signal runJZ 		: STD_LOGIC;
 	signal runHLT 		: STD_LOGIC;
 	
+	-- saidas dos registradores
+	signal PC_out 	: STD_LOGIC_VECTOR (7 downto 0);
+	signal RI_out	: STD_LOGIC_VECTOR (7 downto 0);
+	signal rem_out : STD_LOGIC_VECTOR(7 downto 0);
+	signal rdm_out : STD_LOGIC_VECTOR(7 downto 0);
+	signal mem_out : STD_LOGIC_VECTOR(7 downto 0);
+	signal ac_out  : STD_LOGIC_VECTOR(7 downto 0);
 	
+	-- saidas dos mux
+	signal mpx_out 	: STD_LOGIC_VECTOR(7 downto 0);
+	signal semrdm_out : STD_LOGIC_VECTOR(7 downto 0);
+	
+	-- sinais de escrita
+	signal loadRI  : STD_LOGIC;
+	signal loadPC	: STD_LOGIC;
 	signal loadRDM	: STD_LOGIC;
 	signal loadREM : STD_LOGIC;
+	
+	-- outros sinais
+	signal ula_out 	: STD_LOGIC_VECTOR(7 downto 0);
+	signal loadAC  	: STD_LOGIC;
+	signal mpx_sel 	: STD_LOGIC;
+	signal semrdm_sel : STD_LOGIC;
+	signal incPC		: STD_LOGIC;
+	
+	-----------------------------------
+	-- 			COMPONENTES
+	-----------------------------------
 
 	component ClockDivisor is
 		Port(
@@ -70,7 +96,8 @@ architecture Behavioral of Neander is
 		);
 	end component;
 	
-	COMPONENT reg8bits is
+	-- registradores
+	component reg8bits is
 		Port (
 					  reg_in : in STD_LOGIC_VECTOR (7 downto 0);
 					  clk : in  STD_LOGIC;
@@ -78,15 +105,15 @@ architecture Behavioral of Neander is
 					  reg_carga : in  STD_LOGIC;
 					  reg_out : out  STD_LOGIC_VECTOR (7 downto 0)
 					  );
-	END COMPONENT; 
+	end component; 
 	
-	COMPONENT mux is
+	component mux is
 		Port ( regist1 : in  STD_LOGIC_VECTOR (7 downto 0);
            regist2 : in  STD_LOGIC_VECTOR (7 downto 0);
            selec : in  STD_LOGIC;
            saida : out  STD_LOGIC_VECTOR (7 downto 0)
 			  );
-	END COMPONENT;
+	end component;
 	
 	component PC_reg is
 		Port ( 
@@ -99,35 +126,22 @@ architecture Behavioral of Neander is
 			 );
 	end component;
 	
-	signal mpx_out : STD_LOGIC_VECTOR(7 downto 0);
-	signal semrdm_out : STD_LOGIC_VECTOR(7 downto 0);
-	signal rem_out : STD_LOGIC_VECTOR(7 downto 0);
-	signal mem_out : STD_LOGIC_VECTOR(7 downto 0);
-	
-	signal rdm_out : STD_LOGIC_VECTOR(7 downto 0);
-	
-	signal ula_out : STD_LOGIC_VECTOR(7 downto 0);
-	signal loadAC  : STD_LOGIC;
-	signal ac_out  : STD_LOGIC_VECTOR(7 downto 0);
-	
-	signal mpx_sel : STD_LOGIC;
-	signal semrdm_sel : STD_LOGIC;
-	signal loadRI  : STD_LOGIC;
-	
-	signal incPC	: STD_LOGIC;
-	signal loadPC	: STD_LOGIC; 
-	signal PC_out 	: STD_LOGIC_VECTOR (7 downto 0);
-	
-	
+-------------------------------------------------------------
 begin
+
+	-----------------------------------
+	-- 			PROCESSOS
+	-----------------------------------
 	
+	-- divisor de clock
 	divisor: ClockDivisor
 	port map(
 		clk_50MHz 	=> clk,
 		reset 		=> reset,
 		clk_1Hz 		=> clk_1Hz
 	);
-				
+
+	-- decodificador de instrucoes
 	iDecoder: InstructionDecoder
 	port map (
 		opcode	=> RI_out,
@@ -144,6 +158,7 @@ begin
 		sHLT		=> runHLT
 	);
 	
+	-- registradores
 	AC : reg8bits
 	PORT MAP (
 				clk			=>clk,
@@ -162,17 +177,17 @@ begin
 				reg_out		=>RI_out
 				); 	
 	
-  R_E_M : reg8bits
-  PORT MAP (
+	R_E_M : reg8bits
+	PORT MAP (
 				clk			=>clk,
 				rst			=>reset,
 				reg_carga	=>loadREM,
 				reg_in		=>mpx_out,
 				reg_out		=>rem_out
 				); 
-  
-  R_D_M : reg8bits
-  PORT MAP (
+
+	R_D_M : reg8bits
+	PORT MAP (
 				clk			=>clk,
 				rst			=>reset,
 				reg_carga	=>loadRDM,
@@ -180,8 +195,8 @@ begin
 				reg_out  	=>rdm_out
 				);  
   
-  PC : PC_reg
-  PORT MAP ( 
+	PC : PC_reg
+	PORT MAP ( 
 				clk			=> clk,
 				rst 			=> reset,
 				cargaPC 		=> loadPC,
@@ -205,6 +220,8 @@ begin
 				selec			=> semrdm_sel,
 				saida			=> semrdm_out
 				);
+				
+	-- processo teste
 	pulse: process(clk_1Hz)
 	variable pulse_aux : std_logic := '0';
 	begin
