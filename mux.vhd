@@ -42,7 +42,7 @@ architecture Behavioral of mux is
 begin
 
 	saida <= regist1 when selec = '0' else
-		regist2 when selec = '1' 
+		regist2 when selec = '1' ;
 
 
 end Behavioral;

@@ -100,8 +100,9 @@ architecture Behavioral of Neander is
 	end component;
 	
 	signal mpx_out : STD_LOGIC_VECTOR(7 downto 0);
-	signal rem_out : STD_LOGIC_VECTOR(7 downto 0);
 	signal semrdm_out : STD_LOGIC_VECTOR(7 downto 0);
+	signal rem_out : STD_LOGIC_VECTOR(7 downto 0);
+	signal mem_out : STD_LOGIC_VECTOR(7 downto 0);
 	
 	signal rdm_out : STD_LOGIC_VECTOR(7 downto 0);
 	
@@ -109,6 +110,8 @@ architecture Behavioral of Neander is
 	signal loadAC  : STD_LOGIC;
 	signal ac_out  : STD_LOGIC_VECTOR(7 downto 0);
 	
+	signal mpx_sel : STD_LOGIC;
+	signal semrdm_sel : STD_LOGIC;
 	signal loadRI  : STD_LOGIC;
 	
 	signal incPC	: STD_LOGIC;
@@ -191,9 +194,17 @@ begin
 	PORT MAP (
 				regist1 		=>PC_out,
 				regist2		=>rdm_out,
-				selec			=>mpx_sel,	
+				selec			=>mpx_sel,
+				saida			=>mpx_out
 				);
 				
+	SEMRDM: mux
+	PORT MAP (
+				regist1		=> mem_out,
+				regist2		=> ac_out,
+				selec			=> semrdm_sel,
+				saida			=> semrdm_out
+				);
 	pulse: process(clk_1Hz)
 	variable pulse_aux : std_logic := '0';
 	begin

@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/Aluno/Downloads/soyuz-master/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/Aluno/Downloads/soyuz-master/xst"
+set -tmpdir "C:/Users/Jorge/Downloads/Compressed/soyuz-master/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Jorge/Downloads/Compressed/soyuz-master/xst"
 elaborate
 -ifn Neander.prj
 -ifmt mixed

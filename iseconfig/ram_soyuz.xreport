@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-11-28T21:42:26</DateModified>
+  <DateModified>2017-11-29T09:11:03</DateModified>
   <ModuleName>ram_soyuz</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Jorge/Downloads/Compressed/soyuz-master/iseconfig/ram_soyuz.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Jorge/Downloads/Compressed/soyuz-master\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Aluno/Downloads/soyuz-master/iseconfig/ram_soyuz.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Aluno/Downloads/soyuz-master\</ImplementationReportsDirectory>
   <DateInitialized>2017-11-23T17:10:41</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

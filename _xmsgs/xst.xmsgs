@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">119</arg>. <arg fmt="%s" index="3">parse error, unexpected REM</arg>
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">122</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">rst</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">122</arg>. <arg fmt="%s" index="3">rst</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">123</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">reg_carga</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">123</arg>. <arg fmt="%s" index="3">reg_carga</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">124</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">reg_dina</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">124</arg>. <arg fmt="%s" index="3">reg_dina</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">125</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">reg_douta</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">125</arg>. <arg fmt="%s" index="3">reg_douta</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">130</arg>. <arg fmt="%s" index="3">parse error, unexpected SEMICOLON, expecting COMMA or CLOSEPAR</arg>
+</msg>
+
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">139</arg>. <arg fmt="%s" index="3">parse error, unexpected SEMICOLON, expecting COMMA or CLOSEPAR</arg>
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">141</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">cargaPC</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">141</arg>. <arg fmt="%s" index="3">cargaPC</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">142</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">incrementa</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">142</arg>. <arg fmt="%s" index="3">incrementa</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">143</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">PCdina</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">143</arg>. <arg fmt="%s" index="3">PCdina</arg>: Undefined symbol (last report in this block)
+</msg>
+
+<msg type="error" file="HDLParsers" num="3312" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">144</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">PCdouta</arg>&apos;.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1209" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Aluno/Downloads/soyuz-master/Neander.vhd</arg>&quot; Line <arg fmt="%d" index="2">144</arg>. <arg fmt="%s" index="3">PCdouta</arg>: Undefined symbol (last report in this block)
+</msg>
+
+</messages>
+
