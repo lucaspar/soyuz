@@ -11,16 +11,10 @@
 <msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">write_ram</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_selector</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_z</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_out</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_Z</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_N</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">ula_n</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">semrdm_sel</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
@@ -44,6 +38,9 @@
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">incPC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
 </msg>
 
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">RDM_output</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
+</msg>
+
 <msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">PC_output</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
@@ -54,6 +51,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">NZ_outputN</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">AC_output</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="524" delta="new" >All outputs of the instance &lt;<arg fmt="%s" index="1">R_E_M</arg>&gt; of the block &lt;<arg fmt="%s" index="2">reg8bits</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;.
@@ -69,6 +69,10 @@ This instance will be removed from the design along with all underlying logic
 </msg>
 
 <msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">AC</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">ULA</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">Neander</arg>&gt;.
 It will be removed from the design.
 </msg>
 
@@ -204,6 +208,10 @@ It will be removed from the design.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">next_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1899" delta="new" >Due to constant pushing, all outputs of the instance &lt;<arg fmt="%s" index="1">ULA</arg>&gt; of the block &lt;<arg fmt="%s" index="2">alu</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
 </msg>
 
 <msg type="warning" file="Xst" num="1899" delta="new" >Due to constant pushing, all outputs of the instance &lt;<arg fmt="%s" index="1">AC</arg>&gt; of the block &lt;<arg fmt="%s" index="2">reg8bits</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Neander</arg>&gt;.

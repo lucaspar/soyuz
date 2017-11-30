@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: Neander.prj
@@ -117,11 +117,13 @@ Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/PC.vh
 Architecture behavioral of Entity pc_reg is up to date.
 Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/mux.vhd" in Library work.
 Architecture behavioral of Entity mux is up to date.
+Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
 Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/control_unit.vhd" in Library work.
-Entity <control_unit> compiled.
-Entity <control_unit> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity control_unit is up to date.
 Compiling vhdl file "/home/lucas/work/furg/microprocessados_sistemas/soyuz/Neander.vhd" in Library work.
-Architecture behavioral of Entity neander is up to date.
+Entity <neander> compiled.
+Entity <neander> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -137,6 +139,8 @@ Analyzing hierarchy for entity <reg8bits> in library <work> (architecture <behav
 Analyzing hierarchy for entity <PC_reg> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <mux> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <control_unit> in library <work> (architecture <behavioral>).
 
@@ -161,6 +165,9 @@ Entity <PC_reg> analyzed. Unit <PC_reg> generated.
 
 Analyzing Entity <mux> in library <work> (Architecture <behavioral>).
 Entity <mux> analyzed. Unit <mux> generated.
+
+Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
+Entity <alu> analyzed. Unit <alu> generated.
 
 Analyzing Entity <control_unit> in library <work> (Architecture <behavioral>).
 Entity <control_unit> analyzed. Unit <control_unit> generated.
@@ -214,6 +221,14 @@ Synthesizing Unit <mux>.
 Unit <mux> synthesized.
 
 
+Synthesizing Unit <alu>.
+    Related source file is "/home/lucas/work/furg/microprocessados_sistemas/soyuz/alu.vhd".
+    Found 8-bit adder for signal <result$addsub0000> created at line 32.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <alu> synthesized.
+
+
 Synthesizing Unit <control_unit>.
     Related source file is "/home/lucas/work/furg/microprocessados_sistemas/soyuz/control_unit.vhd".
     Register <loadN> equivalent to <loadAC> has been removed
@@ -240,10 +255,8 @@ Unit <control_unit> synthesized.
 Synthesizing Unit <Neander>.
     Related source file is "/home/lucas/work/furg/microprocessados_sistemas/soyuz/Neander.vhd".
 WARNING:Xst:646 - Signal <write_ram> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <ula_selector> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <ula_out> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
-WARNING:Xst:1780 - Signal <ula_Z> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <ula_N> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ula_z> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ula_n> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <semrdm_sel> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 WARNING:Xst:646 - Signal <rem_out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <mem_out> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
@@ -251,10 +264,12 @@ WARNING:Xst:646 - Signal <mdx_sel> is assigned but never used. This unconnected 
 WARNING:Xst:646 - Signal <loadZ> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <loadN> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <incPC> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <RDM_output> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
 WARNING:Xst:1780 - Signal <PC_output> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <PC_increment> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <NZ_outputZ> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 WARNING:Xst:653 - Signal <NZ_outputN> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <AC_output> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
     Found 1-bit register for signal <pulse_aux>.
     Summary:
 	inferred   1 D-type flip-flop(s).
@@ -273,8 +288,9 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  16x1-bit ROM                                          : 1
-# Adders/Subtractors                                   : 1
+# Adders/Subtractors                                   : 2
  25-bit adder                                          : 1
+ 8-bit adder                                           : 1
 # Counters                                             : 1
  25-bit up counter                                     : 1
 # Registers                                            : 18
@@ -290,6 +306,8 @@ Macro Statistics
 =========================================================================
 
 WARNING:Xst:1290 - Hierarchical block <AC> is unconnected in block <Neander>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <ULA> is unconnected in block <Neander>.
    It will be removed from the design.
 WARNING:Xst:1710 - FF/Latch <aux_4> (without init value) has a constant value of 0 in block <RI>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <aux_5> (without init value) has a constant value of 0 in block <RI>. This FF/Latch will be trimmed during the optimization process.
@@ -344,8 +362,9 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  16x1-bit ROM                                          : 1
-# Adders/Subtractors                                   : 1
+# Adders/Subtractors                                   : 2
  25-bit adder                                          : 1
+ 8-bit adder                                           : 1
 # Counters                                             : 1
  25-bit up counter                                     : 1
 # Registers                                            : 67
@@ -356,6 +375,8 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1899 - Due to constant pushing, all outputs of the instance <ULA> of the block <alu> are unconnected in block <Neander>.
+   This instance will be removed from the design along with all underlying logic
 WARNING:Xst:1899 - Due to constant pushing, all outputs of the instance <AC> of the block <reg8bits> are unconnected in block <Neander>.
    This instance will be removed from the design along with all underlying logic
 
@@ -654,14 +675,14 @@ Offset:              4.063ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.56 secs
+Total CPU time to Xst completion: 4.60 secs
  
 --> 
 
 
-Total memory usage is 517820 kilobytes
+Total memory usage is 518344 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  123 (   0 filtered)
+Number of warnings :  125 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

@@ -55,12 +55,14 @@ architecture Behavioral of Neander is
 	signal loadZ 		: STD_LOGIC;
 	
 	-- ula
+	signal AC_output		: STD_LOGIC_VECTOR (7 downto 0);
+	signal RDM_output		: STD_LOGIC_VECTOR (7 downto 0);
 	signal NZ_outputN		: STD_LOGIC;
 	signal NZ_outputZ		: STD_LOGIC;
-	signal ula_N			: STD_LOGIC;
-	signal ula_Z			: STD_LOGIC;
+	signal ula_n			: STD_LOGIC;
+	signal ula_z			: STD_LOGIC;
 	signal ula_out 		: STD_LOGIC_VECTOR(7 downto 0);
-	signal ula_selector	: STD_LOGIC_VECTOR(2 downto 0);
+	signal ula_op			: STD_LOGIC_VECTOR(2 downto 0);
 	
 	-- outros sinais
 	signal mpx_sel 	: STD_LOGIC;
@@ -140,6 +142,17 @@ architecture Behavioral of Neander is
 				incrementa 	: in  STD_LOGIC;
 				PCin 			: in STD_LOGIC_VECTOR(7 downto 0);
 				PCout 		: out  STD_LOGIC_VECTOR(7 downto 0)
+		);
+	end component;
+	
+	component alu is
+		Port ( 	
+				X 			: in  STD_LOGIC_VECTOR (7 downto 0);
+				Y 			: in  STD_LOGIC_VECTOR (7 downto 0);
+				operation: in  STD_LOGIC_VECTOR (2 downto 0);
+				N			: out STD_LOGIC;
+				Z			: out STD_LOGIC;
+				output	: out STD_LOGIC_VECTOR (7 downto 0)
 		);
 	end component;
 	
@@ -274,8 +287,18 @@ begin
 				saida			=> semrdm_out
 				);
 				
+	ULA: alu
+	PORT MAP (
+				X 				=> AC_output,
+				Y 				=> RDM_output,
+				operation	=> ula_op,
+				N 				=> ula_n,
+				Z 				=> ula_z,
+				output 		=> ula_out
+	);
+				
 	CU: control_unit
-	port map (
+	PORT MAP (
 		clk 	=> clk, 				rst	=> reset,
 		N 		=> NZ_outputN, 	Z 		=> NZ_outputZ,
 		
@@ -292,9 +315,9 @@ begin
 		loadN	  => loadN, 	loadZ  => loadZ,
 		
 		-- outros
-		sel_ula => ula_selector, 	write_ram 	=> write_ram,
-		mpx_sel => mpx_sel, 			PC_inc 		=> PC_increment,
-		mdx_sel => mdx_sel, 			stop 			=> debug_out
+		sel_ula => ula_op, 	write_ram 	=> write_ram,
+		mpx_sel => mpx_sel, 	PC_inc 		=> PC_increment,
+		mdx_sel => mdx_sel, 	stop 			=> debug_out
 	);
 				
 	-- processo teste
