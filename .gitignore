@@ -45,11 +45,13 @@
 !*.wcfg
 !*.coe
 #########
-#MIG
+# Project
 #########
 !*.prj
 !*.mem
 !*.xise
+!*.xco
+!*.ucf
 #########
 #Project files
 #########
