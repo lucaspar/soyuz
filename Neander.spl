@@ -1,7 +1,0 @@
-[Inputs]
-clk
-reset
-troca
-[Outputs]
-pulsing
-[BiDir]

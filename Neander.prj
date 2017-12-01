@@ -1,8 +1,0 @@
-vhdl work "reg8bits.vhd"
-vhdl work "PC.vhd"
-vhdl work "mux.vhd"
-vhdl work "instruction_decoder.vhd"
-vhdl work "control_unit.vhd"
-vhdl work "ClockDivisor.vhd"
-vhdl work "alu.vhd"
-vhdl work "Neander.vhd"

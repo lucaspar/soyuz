@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/lucas/work/furg/microprocessados_sistemas/soyuz/Neander.ncd
-OUTFILE=/home/lucas/work/furg/microprocessados_sistemas/soyuz/Neander.bit
-FAMILY=Spartan3E
-PART=xc3s500e-5fg320
-WORKINGDIR=/home/lucas/work/furg/microprocessados_sistemas/soyuz
-LICENSE=WebPack
-USER_INFO=__0_0_0

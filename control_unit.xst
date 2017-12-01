@@ -1,5 +1,0 @@
-set -tmpdir "/home/lucas/work/furg/microprocessados_sistemas/soyuz/xst/projnav.tmp"
-set -xsthdpdir "/home/lucas/work/furg/microprocessados_sistemas/soyuz/xst"
-elaborate
--ifn control_unit.prj
--ifmt mixed
