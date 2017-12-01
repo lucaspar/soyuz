@@ -66,6 +66,15 @@ BEGIN
           pulsing => pulsing,
           debug_out => debug_out
         );
+		  
+	-- Instantiate the Unit Under Test (UUT)
+   uut: ram_soyuz PORT MAP (
+          clka => clka,
+          wea => wea,
+          addra => addra,
+          dina => dina,
+          douta => douta
+        );
  
    -- Neander stimulus process
    stim_proc: process

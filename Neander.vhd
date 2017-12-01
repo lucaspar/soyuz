@@ -40,8 +40,8 @@ architecture Behavioral of Neander is
 	signal rdm_out 	: STD_LOGIC_VECTOR(7 downto 0);
 	signal mem_out 	: STD_LOGIC_VECTOR(7 downto 0);
 	signal ac_out  	: STD_LOGIC_VECTOR(7 downto 0);
-	signal flags_out_n	: STD_LOGIC;
-	signal flags_out_z	: STD_LOGIC;
+	signal flags_out_n: STD_LOGIC;
+	signal flags_out_z: STD_LOGIC;
 	
 	-- saidas dos mux
 	signal mpx_out 	: STD_LOGIC_VECTOR(7 downto 0);
@@ -80,7 +80,7 @@ architecture Behavioral of Neander is
 		);
 	end component;
 	
-	component RAM is
+	component RAM_Soyuz is
 		Port (
 			clka 	: IN STD_LOGIC;
 			wea 	: IN STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -216,7 +216,7 @@ begin
 	);
 	
 	-- RAM block
-	mem: RAM
+	RAM: RAM_Soyuz
 	port map(
 		clka 	=> clk,
 		wea 	=> write_ram,
