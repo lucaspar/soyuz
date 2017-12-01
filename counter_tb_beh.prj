@@ -1,0 +1,3 @@
+vhdl work "ClockDivisor.vhd"
+vhdl work "Neander.vhd"
+vhdl work "counter_tb.vhd"

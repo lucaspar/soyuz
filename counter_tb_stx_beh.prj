@@ -1,0 +1,3 @@
+vhdl isim_temp "ClockDivisor.vhd"
+vhdl isim_temp "Neander.vhd"
+vhdl isim_temp "counter_tb.vhd"
