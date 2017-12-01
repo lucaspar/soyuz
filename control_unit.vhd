@@ -34,7 +34,7 @@ entity control_unit is
 			
 			-- outros
 			PC_inc 		: out STD_LOGIC;
-			write_ram 	: out STD_LOGIC;
+			write_ram 	: out STD_LOGIC_VECTOR(0 DOWNTO 0);
 			stop			: out STD_LOGIC	-- halt
 	);
 
@@ -80,7 +80,7 @@ begin
 			loadRI 		<= '0';			
 			loadN 		<= '0';
 			loadZ 		<= '0';			
-			write_ram 	<= '0';
+			write_ram 	<= "0";
 			next_state 	<= IDLE;
 			
 		-- transicao de estados
@@ -102,7 +102,7 @@ begin
 					PC_inc 		<= '0';
 					loadRDM 		<= '0';
 					loadRI 		<= '0';
-					write_ram 	<= '0';
+					write_ram 	<= "0";
 					loadN 		<= '0';
 					loadZ 		<= '0';
 					mpx_sel 		<= '0'; 		-- select 0 for PC -> REM
@@ -221,7 +221,7 @@ begin
 				when RUN_STA2 =>
 					mdx_sel <= '0';
 					loadRDM <= '0';
-					write_ram <= '1';
+					write_ram <= "1";
 					next_state <= BUSCA_INSTRUCAO;
 					
 				-- PC <- RDM

@@ -34,16 +34,18 @@ architecture Behavioral of Neander is
 	signal runHLT 		: STD_LOGIC;
 	
 	-- saidas dos registradores
-	signal PC_out 		: STD_LOGIC_VECTOR(7 downto 0);
-	signal RI_out		: STD_LOGIC_VECTOR(7 downto 0);
+	signal pc_out 		: STD_LOGIC_VECTOR(7 downto 0);
+	signal ri_out		: STD_LOGIC_VECTOR(7 downto 0);
 	signal rem_out 	: STD_LOGIC_VECTOR(7 downto 0);
 	signal rdm_out 	: STD_LOGIC_VECTOR(7 downto 0);
 	signal mem_out 	: STD_LOGIC_VECTOR(7 downto 0);
 	signal ac_out  	: STD_LOGIC_VECTOR(7 downto 0);
+	signal flags_out_n	: STD_LOGIC;
+	signal flags_out_z	: STD_LOGIC;
 	
 	-- saidas dos mux
 	signal mpx_out 	: STD_LOGIC_VECTOR(7 downto 0);
-	signal semrdm_out : STD_LOGIC_VECTOR(7 downto 0);
+	signal mdx_out 	: STD_LOGIC_VECTOR(7 downto 0);
 	
 	-- sinais de escrita
 	signal loadAC 		: STD_LOGIC;
@@ -55,25 +57,16 @@ architecture Behavioral of Neander is
 	signal loadZ 		: STD_LOGIC;
 	
 	-- ula
-	signal AC_output		: STD_LOGIC_VECTOR (7 downto 0);
-	signal RDM_output		: STD_LOGIC_VECTOR (7 downto 0);
-	signal NZ_outputN		: STD_LOGIC;
-	signal NZ_outputZ		: STD_LOGIC;
-	signal ula_n			: STD_LOGIC;
-	signal ula_z			: STD_LOGIC;
+	signal ula_out_n		: STD_LOGIC;
+	signal ula_out_z		: STD_LOGIC;
 	signal ula_out 		: STD_LOGIC_VECTOR(7 downto 0);
 	signal ula_op			: STD_LOGIC_VECTOR(2 downto 0);
 	
 	-- outros sinais
 	signal mpx_sel 	: STD_LOGIC;
 	signal mdx_sel 	: STD_LOGIC;
-	signal semrdm_sel : STD_LOGIC;
-	signal incPC		: STD_LOGIC;
-	signal write_ram 	: STD_LOGIC;
-	
-	-- PC
-	signal PC_increment	: STD_LOGIC;
-	signal PC_output		: STD_LOGIC_VECTOR (7 downto 0);
+	signal write_ram 	: STD_LOGIC_VECTOR(0 DOWNTO 0);
+	signal pc_inc		: STD_LOGIC;
 	
 	-----------------------------------
 	-- 			COMPONENTES
@@ -156,6 +149,21 @@ architecture Behavioral of Neander is
 		);
 	end component;
 	
+	component flags_ula is
+		port (
+				clk 	: in  STD_LOGIC;
+				reset	: in  STD_LOGIC;
+
+				loadN : in  STD_LOGIC;
+				N_in  : in 	STD_LOGIC;
+				N_out	: out STD_LOGIC;
+				
+				loadZ	: in 	STD_LOGIC;
+				Z_in  : in  STD_LOGIC;
+				Z_out : out STD_LOGIC
+		);
+	end component;
+	
 	component control_unit is
 		Port (
 				-- input
@@ -186,7 +194,7 @@ architecture Behavioral of Neander is
 				
 				-- outros
 				PC_inc 		: out STD_LOGIC;
-				write_ram 	: out STD_LOGIC;
+				write_ram 	: out STD_LOGIC_VECTOR(0 DOWNTO 0);
 				stop			: out STD_LOGIC	-- halt
 		);
 	end component;
@@ -205,6 +213,16 @@ begin
 		clk_50MHz 	=> clk,
 		reset 		=> reset,
 		clk_1Hz 		=> clk_1Hz
+	);
+	
+	-- RAM block
+	mem: RAM
+	port map(
+		clka 	=> clk,
+		wea 	=> write_ram,
+		addra => rem_out,
+		dina 	=> mdx_out,
+		douta => mem_out
 	);
 
 	-- decodificador de instrucoes
@@ -257,7 +275,7 @@ begin
 				clk			=>clk,
 				rst			=>reset,
 				reg_carga	=>loadRDM,
-				reg_in		=>semrdm_out,
+				reg_in		=>mdx_out,
 				reg_out  	=>rdm_out
 				);  
   
@@ -266,9 +284,9 @@ begin
 				clk			=> clk,
 				rst 			=> reset,
 				cargaPC 		=> loadPC,
-				incrementa 	=> incPC,
-				PCin 			=> RDM_out,
-				PCout 		=> PC_out
+				incrementa 	=> pc_inc,
+				PCin 			=> rdm_out,
+				PCout 		=> pc_out
 				);
 				
 	MPX : mux
@@ -279,28 +297,35 @@ begin
 				saida			=>mpx_out
 				);
 				
-	SEMRDM: mux
+	MDX: mux
 	PORT MAP (
 				regist1		=> mem_out,
 				regist2		=> ac_out,
-				selec			=> semrdm_sel,
-				saida			=> semrdm_out
+				selec			=> mdx_sel,
+				saida			=> mdx_out
 				);
 				
 	ULA: alu
 	PORT MAP (
-				X 				=> AC_output,
-				Y 				=> RDM_output,
+				X 				=> ac_out,
+				Y 				=> rdm_out,
 				operation	=> ula_op,
-				N 				=> ula_n,
-				Z 				=> ula_z,
+				N 				=> ula_out_n,
+				Z 				=> ula_out_z,
 				output 		=> ula_out
+	);
+	
+	NZ: flags_ula
+	PORT MAP (
+		clk => clk, 			reset => reset,
+		N_in => ula_out_N, 	N_out => flags_out_N, 	loadN => loadN,
+		Z_in => ula_out_Z, 	Z_out => flags_out_Z, 	loadZ => loadZ
 	);
 				
 	CU: control_unit
 	PORT MAP (
 		clk 	=> clk, 				rst	=> reset,
-		N 		=> NZ_outputN, 	Z 		=> NZ_outputZ,
+		N 		=> flags_out_N, 	Z 		=> flags_out_Z,
 		
 		-- instruction decoding
 		runNOP => runNOP, 	runSTA => runSTA,		runLDA => runLDA,
@@ -316,7 +341,7 @@ begin
 		
 		-- outros
 		sel_ula => ula_op, 	write_ram 	=> write_ram,
-		mpx_sel => mpx_sel, 	PC_inc 		=> PC_increment,
+		mpx_sel => mpx_sel, 	PC_inc 		=> PC_inc,
 		mdx_sel => mdx_sel, 	stop 			=> debug_out
 	);
 				
