@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Dec  1 11:48:30 2017
+Wed Dec  6 22:51:38 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -51,7 +51,7 @@ Pinout by Pin Number:
 |B11       |           |IOB      |IO/VREF_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B12       |           |         |VCCAUX                   |         |           |              |          |         |           |         |2.5      |          |           |                |
 |B13       |           |DIFFS    |IO_L05N_0/VREF_0         |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|B14       |           |DIFFM    |IO_L04P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
+|B14       |debug_out  |IOB      |IO_L04P_0                |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
 |B15       |           |DIFFMI   |IP_L02P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B16       |           |DIFFM    |IO_L01P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B17       |           |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
@@ -69,7 +69,7 @@ Pinout by Pin Number:
 |C11       |           |DIFFM    |IO_L09P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |C12       |           |DIFFMI   |IP_L07P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |C13       |           |         |VCCO_0                   |         |           |0             |          |         |           |         |2.50     |          |           |                |
-|C14       |debug_out  |IOB      |IO_L03N_0/VREF_0         |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |         |UNLOCATED |NO         |NONE            |
+|C14       |           |DIFFS    |IO_L03N_0/VREF_0         |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |C15       |           |IBUF     |IP                       |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |C16       |           |         |TDO                      |         |           |              |          |         |           |         |         |          |           |                |
 |C17       |           |DIFFS    |IO_L24N_1/LDC2           |UNUSED   |           |1             |          |         |           |         |         |          |           |                |

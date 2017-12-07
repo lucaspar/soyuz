@@ -1,4 +1,5 @@
 # Output products list for <ram_soyuz>
+_dbg/ram_soyuz_core2ise.tcl
 _xmsgs/pn_parser.xmsgs
 ram_soyuz/blk_mem_gen_v7_3_readme.txt
 ram_soyuz/doc/blk_mem_gen_v7_3_vinfo.html
@@ -44,7 +45,6 @@ ram_soyuz/simulation/timing/ucli_commands.key
 ram_soyuz/simulation/timing/vcs_session.tcl
 ram_soyuz/simulation/timing/wave_mti.do
 ram_soyuz/simulation/timing/wave_ncsim.sv
-ram_soyuz.asy
 ram_soyuz.gise
 ram_soyuz.mif
 ram_soyuz.ngc

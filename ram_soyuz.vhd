@@ -62,7 +62,6 @@ COMPONENT wrapped_ram_soyuz
   );
 END COMPONENT;
 
-
 -- Configuration specification
   FOR ALL : wrapped_ram_soyuz USE ENTITY XilinxCoreLib.blk_mem_gen_v7_3(behavioral)
     GENERIC MAP (
@@ -139,8 +138,6 @@ U0 : wrapped_ram_soyuz
     dina => dina,
     douta => douta
   );
-  
-  
 -- synthesis translate_on
 
 END ram_soyuz_a;

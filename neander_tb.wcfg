@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="29" />
+   <WVObjectSize size="30" />
    <wvobject fp_name="/neander_tb/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -112,6 +112,18 @@
       <obj_property name="label">MPX_out</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/neander_tb/computer/MDX/saida" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">saida[7:0]</obj_property>
+      <obj_property name="ObjectShortName">saida[7:0]</obj_property>
+      <obj_property name="label">MDX_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neander_tb/computer/mem_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_out[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="divider30" type="divider">
       <obj_property name="label">ULA</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -174,12 +186,5 @@
       <obj_property name="ElementShortName">sel_ula[2:0]</obj_property>
       <obj_property name="ObjectShortName">sel_ula[2:0]</obj_property>
       <obj_property name="label">CTRL_sel_ula[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/neander_tb/computer/MDX/saida" type="array" db_ref_id="1">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">saida[7:0]</obj_property>
-      <obj_property name="ObjectShortName">saida[7:0]</obj_property>
-      <obj_property name="label">MDX_out</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

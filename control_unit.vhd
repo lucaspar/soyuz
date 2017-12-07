@@ -59,9 +59,7 @@ begin
 	-- sincroniza execucao
 	synchrony: process(next_state, rst, clk)
 		begin
-			if (rst = '1') then
-				current_state <= IDLE;
-			elsif rising_edge(clk) then
+			if rising_edge(clk) then
 				current_state <= next_state;
 			end if;
 	end process synchrony;

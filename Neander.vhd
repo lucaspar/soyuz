@@ -245,38 +245,38 @@ begin
 	-- registradores
 	AC : reg8bits
 	PORT MAP (
-				clk			=>clk,
-				rst			=>reset,
-				reg_carga	=>loadAC,
-				reg_in		=>ula_out,
-				reg_out		=>ac_out
+				clk			=> clk,
+				rst			=> reset,
+				reg_carga	=> loadAC,
+				reg_in		=> ula_out,
+				reg_out		=> ac_out
 				); 	
 				
 	RI : reg8bits
 	PORT MAP (
-				clk			=>clk,
-				rst			=>reset,
-				reg_carga	=>loadRI,
-				reg_in		=>rdm_out,
-				reg_out		=>RI_out
+				clk			=> clk,
+				rst			=> reset,
+				reg_carga	=> loadRI,
+				reg_in		=> rdm_out,
+				reg_out		=> RI_out
 				); 	
 	
 	R_E_M : reg8bits
 	PORT MAP (
-				clk			=>clk,
-				rst			=>reset,
-				reg_carga	=>loadREM,
-				reg_in		=>mpx_out,
-				reg_out		=>rem_out
+				clk			=> clk,
+				rst			=> reset,
+				reg_carga	=> loadREM,
+				reg_in		=> mpx_out,
+				reg_out		=> rem_out
 				); 
 
 	R_D_M : reg8bits
 	PORT MAP (
-				clk			=>clk,
-				rst			=>reset,
-				reg_carga	=>loadRDM,
-				reg_in		=>mdx_out,
-				reg_out  	=>rdm_out
+				clk			=> clk,
+				rst			=> reset,
+				reg_carga	=> loadRDM,
+				reg_in		=> mdx_out,
+				reg_out  	=> rdm_out
 				);  
   
 	PC : PC_reg
@@ -289,12 +289,12 @@ begin
 				PCout 		=> pc_out
 				);
 				
-	MPX : mux
+	MPX: mux
 	PORT MAP (
-				regist1 		=>PC_out,
-				regist2		=>rdm_out,
-				selec			=>mpx_sel,
-				saida			=>mpx_out
+				regist1 		=> PC_out,
+				regist2		=> rdm_out,
+				selec			=> mpx_sel,
+				saida			=> mpx_out
 				);
 				
 	MDX: mux

@@ -211,10 +211,6 @@ utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path ram_soyuz/si
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type Ignore
 incr fcount
 
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path ram_soyuz.asy
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type asy
-incr fcount
-
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path ram_soyuz.mif
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
 incr fcount
